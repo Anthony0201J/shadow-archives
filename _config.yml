@@ -1,0 +1,43 @@
+title: "Shadow Archives"
+description: "Honest reviews, comparisons, and guides for VPNs, web hosting, AI tools, and digital privacy."
+url: ""
+baseurl: ""
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Site metadata
+author:
+  name: "Shadow Archives"
+  url: "https://shadow-archives.github.io"
+
+# Social / SEO
+twitter:
+  card: summary_large_image
+logo: /assets/images/logo.png
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude
+exclude:
+  - README.md
+  - deploy.sh
+  - keyword-tracker.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — Honest Reviews & Digital Privacy Guides{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  {% if page.layout == 'post' %}
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "description": "{{ page.description | escape }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ page.author | default: 'Shadow Archives Team' }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
+  {% endif %}
+
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "description": "{{ site.description }}"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo">Shadow<span>Archives</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('active')" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+        <a href="{{ '/' | relative_url }}#vpn">VPNs</a>
+        <a href="{{ '/' | relative_url }}#hosting">Hosting</a>
+        <a href="{{ '/' | relative_url }}#ai-tools">AI Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Shadow Archives</h4>
+          <p>We research, test, and review digital tools so you can make informed decisions. Our guides are written by real users who have hands-on experience with every product we recommend.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}#vpn">VPN Reviews</a></li>
+            <li><a href="{{ '/' | relative_url }}#hosting">Web Hosting</a></li>
+            <li><a href="{{ '/' | relative_url }}#ai-tools">AI Writing Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">All Reviews</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="affiliate-disclosure">
+        <strong>Affiliate Disclosure:</strong> Shadow Archives is reader-supported. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you. This does not influence our reviews — we recommend products based on honest testing and research. We only promote services we would use ourselves. <a href="#">Read our full disclosure policy</a>.
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: '%Y' }} Shadow Archives. All rights reserved. Built with purpose, not fluff.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+  <script>
+    window.addEventListener('scroll', function() {
+      document.querySelector('.scroll-top').classList.toggle('visible', window.scrollY > 300);
+    });
+  </script>
+
+</body>
+</html>

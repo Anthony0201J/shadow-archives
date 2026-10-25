@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="layout-with-sidebar">
+    <article class="main-content">
+      <header class="post-header">
+        <div class="post-meta">
+          {% if page.category %}<span class="category">{{ page.category }}</span>{% endif %}
+          <span>{{ page.date | date: "%B %d, %Y" }}</span>
+          {% if page.read_time %}<span>{{ page.read_time }} min read</span>{% endif %}
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="post-excerpt">{{ page.description }}</p>
+        {% endif %}
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-widget">
+        <h3>About Shadow Archives</h3>
+        <p class="about-text">We spend hundreds of hours testing VPNs, hosting providers, and AI tools so you don't have to. Every recommendation is backed by hands-on experience.</p>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>Popular Reviews</h3>
+        <ul>
+          {% for post in site.posts limit:5 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>Categories</h3>
+        <div class="category-list">
+          <a href="{{ '/' | relative_url }}#vpn" class="category-tag">VPNs</a>
+          <a href="{{ '/' | relative_url }}#hosting" class="category-tag">Web Hosting</a>
+          <a href="{{ '/' | relative_url }}#ai-tools" class="category-tag">AI Tools</a>
+          <a href="{{ '/' | relative_url }}" class="category-tag">Privacy</a>
+          <a href="{{ '/' | relative_url }}" class="category-tag">Security</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
