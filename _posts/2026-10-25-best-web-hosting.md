@@ -76,7 +76,7 @@ Hostinger dominates the budget hosting space for good reason. At $2.99/month on 
 
 **What makes Hostinger stand out for beginners:** The onboarding experience is genuinely well-designed. Their AI-powered website builder walks you through setup step by step, and the hPanel control panel is significantly more intuitive than the industry-standard cPanel. For someone who's never managed a website, this matters more than raw specs.
 
-**Performance in our tests was solid.** We measured average response times of 180-220ms from US servers, with 99.95% uptime over our 6-month monitoring period. Not the fastest on this list, but well within acceptable range for blogs, small business sites, and personal projects.
+Not the fastest on this list, but well within acceptable range for blogs, small business sites, and personal projects.
 
 The Premium plan ($2.99/mo intro) includes 3 websites, 20 GB SSD storage, unlimited bandwidth, free domain for the first year, and a free SSL certificate. For most beginners, this is more than enough to start.
 
@@ -164,9 +164,9 @@ Bluehost is officially recommended by WordPress.org — the only host on this li
 
 SiteGround is the hosting provider that power users recommend to beginners — and for good reason. Their customer support is genuinely excellent (not just "good for a hosting company"), and the performance on Google Cloud infrastructure is noticeably better than traditional shared hosting.
 
-**Support is SiteGround's defining feature.** Average live chat response time in our tests was under 3 minutes, and the agents actually knew what they were doing. We deliberately asked technical questions about .htaccess rules, PHP version conflicts, and CDN configuration — and got accurate, helpful answers every time. This is rare in the hosting industry.
+We deliberately asked technical questions about .htaccess rules, PHP version conflicts, and CDN configuration — and got accurate, helpful answers every time. This is rare in the hosting industry.
 
-**Performance runs on Google Cloud Platform.** SiteGround migrated its entire infrastructure to Google Cloud, which means you get enterprise-grade hardware, SSD persistent storage, and Google's global network. In our tests, SiteGround consistently delivered the fastest response times among shared hosts: 140-180ms average from US servers.
+**Performance runs on Google Cloud Platform.** SiteGround migrated its entire infrastructure to Google Cloud, which means you get enterprise-grade hardware, SSD persistent storage, and Google's global network.
 
 The catch? **SiteGround has the most aggressive renewal pricing on this list.** The StartUp plan goes from $2.99/month to $17.99/month — a 502% increase. This makes SiteGround the most expensive option for long-term hosting unless you time your renewals carefully.
 
@@ -212,7 +212,7 @@ Cloudways is the odd one out on this list — and that's why it's here. Instead 
 
 **The value proposition is simple:** no renewal markup, no hidden fees, and pay-as-you-go billing. Your $11/month stays $11/month forever. Compare that to SiteGround's jump from $2.99 to $17.99. Over three years, Cloudways is actually cheaper than SiteGround despite the higher starting price.
 
-**Performance is in a different league.** You're getting a dedicated cloud server, not a shared environment with hundreds of other sites. In our tests, Cloudways on DigitalOcean delivered 95-130ms response times — roughly 40% faster than the best shared hosts. For sites where page speed directly impacts revenue (e.g., e-commerce), this difference matters.
+**Performance is in a different league.** You're getting a dedicated cloud server, not a shared environment with hundreds of other sites. For sites where page speed directly impacts revenue (e.g., e-commerce), this difference matters.
 
 **The tradeoff: Cloudways is not quite as beginner-friendly.** There's no cPanel — you manage your server through Cloudways' custom panel, which has a learning curve. There's no free domain or email hosting (you'll need to set up email through a third-party service). If you want an absolutely plug-and-play experience, Bluehost or Hostinger is a better fit.
 
@@ -255,7 +255,7 @@ Cloudways is the odd one out on this list — and that's why it's here. Instead 
 
 A2 Hosting has built its brand around speed, and the Turbo plans deliver on that promise. If site performance is your top priority and you're willing to spend a bit more, A2 Hosting's Turbo servers offer some of the fastest shared hosting available.
 
-**The Turbo Boost and Turbo Max plans are where A2 shines.** These use LiteSpeed web servers instead of the standard Apache, resulting in significantly faster page loads. In our tests, A2's Turbo plans delivered 120-160ms response times — competitive with Cloudways' managed cloud offering at a lower price point.
+**The Turbo Boost and Turbo Max plans are where A2 shines.** These use LiteSpeed web servers instead of the standard Apache, resulting in significantly faster page loads.
 
 **A2's anytime money-back guarantee is unique.** While every other host on this list gives you 30 days (or 3 days for Cloudways), A2 Hosting will refund the unused portion of your plan at any time. If you're 8 months into a 12-month plan and decide to leave, you'll get a prorated refund. No other host offers this.
 
